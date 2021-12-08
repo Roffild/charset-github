@@ -1,0 +1,84 @@
+--
+-- Licensed under the Apache License, Version 2.0 (the "License");
+-- you may not use this file except in compliance with the License.
+-- You may obtain a copy of the License at
+--
+--     http://www.apache.org/licenses/LICENSE-2.0
+--
+-- Unless required by applicable law or agreed to in writing, software
+-- distributed under the License is distributed on an "AS IS" BASIS,
+-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-- See the License for the specific language governing permissions and
+-- limitations under the License.
+--
+-- https://github.com/Roffild/qlua
+--
+
+local roffild_win1251 = {}
+
+function roffild_win1251.getParamExAll()
+    return {
+        MARKETPRICE = {type = "NUMERIC", desc = "Рыночная цена вчера"},
+        MARKETPRICETODAY = {type = "NUMERIC", desc = "Рыночная цена"},
+        QUOTEBASIS = {type = "STRING", desc = "Тип цены"},
+        NEXTCOUPON = {type = "NUMERIC", desc = "Дата выплаты купона"},
+        BUYBACKPRICE = {type = "NUMERIC", desc = "Цена оферты"},
+        BUYBACKDATE = {type = "NUMERIC", desc = "Дата оферты"},
+        ISSUESIZE = {type = "NUMERIC", desc = "Объем обращения"},
+        MARKETPRICE2 = {type = "NUMERIC", desc = "Рыночная цена 2"},
+        LASTOFFER = {type = "NUMERIC", desc = "Лучшее предложение на момент завершения торгов"},
+        PREVDATE = {type = "NUMERIC", desc = "Дата предыдущего торгового дня"},
+        DURATION = {type = "NUMERIC", desc = "Дюрация"},
+        LOPENPRICE = {type = "NUMERIC", desc = "Официальная цена открытия"},
+        LCURRENTPRICE = {type = "NUMERIC", desc = "Официальная текущая цена"},
+        LCLOSEPRICE = {type = "NUMERIC", desc = "Официальная цена закрытия"},
+        PERCENTRATE = {type = "NUMERIC", desc = " Агрегированная ставка"},
+        ISPERCENT = {type = "STRING", desc = "Тип цены фьючерса"},
+        CLSTATE = {type = "STRING", desc = "Статус клиринга"},
+        STARTTIME = {type = "STRING", desc = "Начало основной сессии"},
+        ENDTIME = {type = "STRING", desc = "Окончание основной сессии"},
+        EVNSTARTTIME = {type = "STRING", desc = "Начало вечерней сессии"},
+        EVNENDTIME = {type = "STRING", desc = "Окончание вечерней сессии"},
+        MONSTARTTIME = {type = "STRING", desc = "Начало утренней сессии"},
+        MONENDTIME = {type = "STRING", desc = "Окончание утренней сессии"},
+        THEORPRICE = {type = "NUMERIC", desc = "Теоретическая цена"},
+        CURSTEPPRICE = {type = "STRING", desc = "Валюта шага цены"},
+        REALVMPRICE = {type = "NUMERIC", desc = " Текущая рыночная котировка"},
+        MARG = {type = "STRING", desc = "Маржируемый"},
+        CLPRICE = {type = "NUMERIC", desc = "Котировка последнего клиринга"},
+        EXPDATE = {type = "NUMERIC", desc = "Дата исполнения инструмента"},
+        CROSSRATE = {type = "NUMERIC", desc = "Курс"},
+        BASEPRICE = {type = "NUMERIC", desc = "Базовый курс"},
+        HIGHVAL = {type = "NUMERIC", desc = "Максимальное значение (RTSIND)"},
+        LOWVAL = {type = "NUMERIC", desc = "Минимальное значение (RTSIND)"},
+        ICHANGE = {type = "NUMERIC", desc = "Изменение (RTSIND)"},
+        IOPEN = {type = "NUMERIC", desc = "Значение на момент открытия (RTSIND)"},
+        PCHANGE = {type = "NUMERIC", desc = "Процент изменения (RTSIND)"},
+        OPENPERIODPRICE = {type = "NUMERIC", desc = "Цена предторгового периода"},
+        MIN_CURR_LAST = {type = "NUMERIC", desc = "Минимальная текущая цена"},
+        SETTLECODE = {type = "STRING", desc = "Код расчетов по умолчанию"},
+        STEPPRICECL = {type = "DOUBLE", desc = "Стоимость шага цены для клиринга"},
+        STEPPRICEPRCL = {type = "DOUBLE", desc = "Стоимость шага цены для промклиринга"},
+        MIN_CURR_LAST_TI = {type = "STRING", desc = "Время изменения минимальной текущей цены"},
+        PREVLOTSIZE = {type = "DOUBLE", desc = "Предыдущее значение размера лота"},
+        LOTSIZECHANGEDAT = {type = "DOUBLE", desc = "Дата последнего изменения размера лота"},
+        AUCTPRICE = {type = "NUMERIC", desc = "Цена послеторгового аукциона"},
+        CLOSING_AUCTION_VOLUME = {type = "NUMERIC", desc = "Количество в сделках послеторгового аукциона"},
+        -------------------------------------
+        LONGNAME = {type = "STRING", desc = "Полное название инструмента"},
+        SHORTNAME = {type = "STRING", desc = "Краткое название инструмента"},
+        CODE = {type = "STRING", desc = "Код инструмента"},
+        CLASSNAME = {type = "STRING", desc = "Название класса"},
+        CLASS_CODE = {type = "STRING", desc = "Код класса"},
+        TRADE_DATE_CODE = {type = "DOUBLE", desc = "Дата торгов"},
+        MAT_DATE = {type = "DOUBLE", desc = "Дата погашения"},
+        DAYS_TO_MAT_DATE = {type = "DOUBLE", desc = "Число дней до погашения"},
+        SEC_FACE_VALUE = {type = "DOUBLE", desc = "Номинал инструмента"},
+        SEC_FACE_UNIT = {type = "STRING", desc = "Валюта номинала"},
+        SEC_SCALE = {type = "DOUBLE", desc = "Точность цены"},
+        SEC_PRICE_STEP = {type = "DOUBLE", desc = "Минимальный шаг цены"},
+        SECTYPE = {type = "STRING", desc = "Тип инструмента"},
+    }
+end
+
+return roffild_win1251
